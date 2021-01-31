@@ -26,7 +26,7 @@ const Login = () => {
     setLoading(false);
   };
   return (
-    <CenteredContainer>
+    <CenteredContainer className="w-400">
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log in</h2>

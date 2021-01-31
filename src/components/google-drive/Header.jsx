@@ -1,8 +1,10 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 const Header = () => {
+  const { currentUser } = useAuth();
   return (
     <Navbar
       bg="light"
@@ -14,7 +16,7 @@ const Header = () => {
       }}>
       <Navbar.Brand
         as={Link}
-        to="/"
+        to={currentUser ? "/" : "/login"}
         style={{
           display: "flex",
           justifyContent: "space-between",
